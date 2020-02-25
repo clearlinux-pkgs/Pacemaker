@@ -4,12 +4,12 @@
 #
 Name     : Pacemaker
 Version  : 1.1.22
-Release  : 1
+Release  : 2
 URL      : https://github.com/ClusterLabs/pacemaker/archive/Pacemaker-1.1.22.tar.gz
 Source0  : https://github.com/ClusterLabs/pacemaker/archive/Pacemaker-1.1.22.tar.gz
 Summary  : Pacemaker cluster manager v@PACKAGE_SERIES@
 Group    : Development/Tools
-License  : GPL-2.0 Set This
+License  : GPL-2.0
 Requires: Pacemaker-bin = %{version}-%{release}
 Requires: Pacemaker-data = %{version}-%{release}
 Requires: Pacemaker-lib = %{version}-%{release}
@@ -151,7 +151,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1582660981
+export SOURCE_DATE_EPOCH=1582669067
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -171,7 +171,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1582660981
+export SOURCE_DATE_EPOCH=1582669067
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/Pacemaker
 cp %{_builddir}/pacemaker-Pacemaker-1.1.22/COPYING %{buildroot}/usr/share/package-licenses/Pacemaker/bcf1446d76d42d5f2409dec0b232061e804d091d
