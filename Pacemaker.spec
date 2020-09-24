@@ -4,7 +4,7 @@
 #
 Name     : Pacemaker
 Version  : 1.1.22
-Release  : 3
+Release  : 4
 URL      : https://github.com/ClusterLabs/pacemaker/archive/Pacemaker-1.1.22.tar.gz
 Source0  : https://github.com/ClusterLabs/pacemaker/archive/Pacemaker-1.1.22.tar.gz
 Summary  : Pacemaker cluster manager v@PACKAGE_SERIES@
