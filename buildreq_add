@@ -1,4 +1,13 @@
 # This file contains additional build requirements that did not get
 # picked up automatically. One name per line, no whitespace.
+Linux-PAM-dev
+Sphinx
+asciidoc
+bzip2-dev
+glibc-staticdev
+gnutls-dev
+help2man
+inkscape
 libxslt-bin
 libxslt-dev
+valgrind

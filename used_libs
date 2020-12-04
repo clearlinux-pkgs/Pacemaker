@@ -10,7 +10,8 @@ libglib-2.0.so.0
 libgnutls.so.30
 libncurses.so.6
 libpam.so.0
-libqb.so.0
+libpthread.so.0
+libqb.so.100
 libquorum.so.5
 librt.so.1
 libtinfo.so.6

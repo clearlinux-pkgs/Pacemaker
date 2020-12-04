@@ -1,29 +1,15 @@
+Configure miss: whether the compiler is clang
+Configure miss: compiler option needed when checking for declarations
 Configure miss: whether a statically linked program can dlopen itself
 Configure miss: dld_link in -ldld
 Configure miss: _ prefix in compiled symbols
 Configure miss: sys/dl.h
 Configure miss: dld.h
 Configure miss: mach-o/dyld.h
-Configure miss: lynx
-Configure miss: w3m
 Configure miss: publican
-Configure miss: ssh
-Configure miss: scp
-Configure miss: md5
 Configure miss: NoSuchFunctionName
 Configure miss: dlopen in -lc
 Configure miss: getopt_long in -lgnugetopt
-Configure miss: ftime in -lcompat
-Configure miss: auth-client.h usability
-Configure miss: auth-client.h presence
-Configure miss: auth-client.h
-Configure miss: pam/pam_appl.h usability
-Configure miss: pam/pam_appl.h presence
-Configure miss: pam/pam_appl.h
-Configure miss: winsock.h usability
-Configure miss: winsock.h presence
-Configure miss: winsock.h
-Configure miss: lrm_op_t.rsc_deleted
 Configure miss: sighandler_t
 Configure miss: curses/curses.h usability
 Configure miss: curses/curses.h presence
@@ -31,34 +17,14 @@ Configure miss: curses/curses.h
 Configure miss: ncurses/ncurses.h usability
 Configure miss: ncurses/ncurses.h presence
 Configure miss: ncurses/ncurses.h
-Configure miss: struct lrm_ops.fail_rsc
-Configure miss: heartbeat/hb_config.h usability
-Configure miss: heartbeat/hb_config.h presence
-Configure miss: heartbeat/hb_config.h
-Configure miss: heartbeat/glue_config.h usability
-Configure miss: heartbeat/glue_config.h presence
-Configure miss: heartbeat/glue_config.h
 Configure miss: stonith/stonith.h usability
 Configure miss: stonith/stonith.h presence
 Configure miss: stonith/stonith.h
-Configure miss: agent_config.h usability
-Configure miss: agent_config.h presence
-Configure miss: agent_config.h
 Configure miss: whether to enable support for managing resources via systemd
 Configure miss: whether to enable support for managing resources via Upstart
-Configure miss: heartbeat support... checking for ll_cluster_new in -lhbclient
-Configure miss: libcman
-Configure miss: libconfdb
-Configure miss: libfenced
-Configure miss: libcoroipcc
-Configure miss: net-snmp/net-snmp-config.h usability
-Configure miss: net-snmp/net-snmp-config.h presence
-Configure miss: net-snmp/net-snmp-config.h
-Configure miss: libesmtp.h usability
-Configure miss: libesmtp.h presence
-Configure miss: libesmtp.h
-Configure miss: libesmtp-config
-Configure miss: libgnutls-config
+Configure miss: pam/pam_appl.h usability
+Configure miss: pam/pam_appl.h presence
+Configure miss: pam/pam_appl.h
 Configure miss: servicelog-1 packages
 Configure miss: servicelog-1 OpenIPMI OpenIPMIposix packages
 Configure miss: whether gcc supports "-fgnu89-inline-Wall-Waggregate-return-Wbad-function-cast-Wcast-align-Wdeclaration-after-statement-Wendif-labels-Wfloat-equal-Wformat-security-Wmissing-prototypes-Wmissing-declarations-Wnested-externs-Wno-long-long-Wno-strict-aliasing-Wpointer-arith-Wstrict-prototypes-Wwrite-strings-Wunused-but-set-variable-Wunsigned-char"
