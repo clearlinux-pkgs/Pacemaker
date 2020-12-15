@@ -4,7 +4,7 @@
 #
 Name     : Pacemaker
 Version  : 2.0.5
-Release  : 7
+Release  : 8
 URL      : https://github.com/ClusterLabs/pacemaker/archive/Pacemaker-2.0.5/pacemaker-2.0.5.tar.gz
 Source0  : https://github.com/ClusterLabs/pacemaker/archive/Pacemaker-2.0.5/pacemaker-2.0.5.tar.gz
 Summary  : XML validation & transformation variables per Pacemaker build
