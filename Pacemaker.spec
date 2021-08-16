@@ -4,7 +4,7 @@
 #
 Name     : Pacemaker
 Version  : 2.1.0
-Release  : 14
+Release  : 15
 URL      : https://github.com/ClusterLabs/pacemaker/archive/Pacemaker-2.1.0/pacemaker-2.1.0.tar.gz
 Source0  : https://github.com/ClusterLabs/pacemaker/archive/Pacemaker-2.1.0/pacemaker-2.1.0.tar.gz
 Summary  : XML validation & transformation variables per Pacemaker build
@@ -21,13 +21,20 @@ Requires: Pacemaker-python3 = %{version}-%{release}
 BuildRequires : Linux-PAM-dev
 BuildRequires : Sphinx
 BuildRequires : asciidoc
+BuildRequires : automake
+BuildRequires : automake-dev
 BuildRequires : bzip2-dev
+BuildRequires : gettext-bin
 BuildRequires : glibc-staticdev
 BuildRequires : gnutls-dev
 BuildRequires : help2man
 BuildRequires : inkscape
+BuildRequires : libtool
+BuildRequires : libtool-dev
 BuildRequires : libxslt-bin
 BuildRequires : libxslt-dev
+BuildRequires : m4
+BuildRequires : pkg-config-dev
 BuildRequires : pkgconfig(OpenIPMI)
 BuildRequires : pkgconfig(OpenIPMIposix)
 BuildRequires : pkgconfig(dbus-1)
@@ -37,6 +44,7 @@ BuildRequires : pkgconfig(libqb)
 BuildRequires : pkgconfig(libxml-2.0)
 BuildRequires : pkgconfig(uuid)
 BuildRequires : valgrind
+Patch1: 0001-Refactor-libstonithd-don-t-put-compatibility-stuff-i.patch
 
 %description
 This directory contains files useful for building rpm packages for pacemaker.
@@ -141,13 +149,14 @@ python3 components for the Pacemaker package.
 %prep
 %setup -q -n pacemaker-Pacemaker-2.1.0
 cd %{_builddir}/pacemaker-Pacemaker-2.1.0
+%patch1 -p1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1628618423
+export SOURCE_DATE_EPOCH=1629074623
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -167,7 +176,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1628618423
+export SOURCE_DATE_EPOCH=1629074623
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/Pacemaker
 cp %{_builddir}/pacemaker-Pacemaker-2.1.0/COPYING %{buildroot}/usr/share/package-licenses/Pacemaker/bcf1446d76d42d5f2409dec0b232061e804d091d
@@ -4374,7 +4383,6 @@ cp %{_builddir}/pacemaker-Pacemaker-2.1.0/COPYING %{buildroot}/usr/share/package
 /usr/include/pacemaker/crm/compatibility.h
 /usr/include/pacemaker/crm/crm.h
 /usr/include/pacemaker/crm/crm_compat.h
-/usr/include/pacemaker/crm/fencing/compat.h
 /usr/include/pacemaker/crm/lrmd.h
 /usr/include/pacemaker/crm/msg_xml.h
 /usr/include/pacemaker/crm/msg_xml_compat.h
