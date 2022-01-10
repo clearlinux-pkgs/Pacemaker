@@ -1,7 +1,7 @@
 # This file contains additional build requirements that did not get
 # picked up automatically. One name per line, no whitespace.
 Linux-PAM-dev
-Sphinx
+pypi(sphinx)
 asciidoc
 bzip2-dev
 glibc-staticdev

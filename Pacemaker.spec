@@ -4,7 +4,7 @@
 #
 Name     : Pacemaker
 Version  : 2.1.1
-Release  : 20
+Release  : 21
 URL      : https://github.com/ClusterLabs/pacemaker/archive/Pacemaker-2.1.1/pacemaker-2.1.1.tar.gz
 Source0  : https://github.com/ClusterLabs/pacemaker/archive/Pacemaker-2.1.1/pacemaker-2.1.1.tar.gz
 Summary  : XML validation & transformation variables per Pacemaker build
@@ -19,7 +19,6 @@ Requires: Pacemaker-man = %{version}-%{release}
 Requires: Pacemaker-python = %{version}-%{release}
 Requires: Pacemaker-python3 = %{version}-%{release}
 BuildRequires : Linux-PAM-dev
-BuildRequires : Sphinx
 BuildRequires : asciidoc
 BuildRequires : bzip2-dev
 BuildRequires : glibc-staticdev
@@ -36,6 +35,8 @@ BuildRequires : pkgconfig(libcpg)
 BuildRequires : pkgconfig(libqb)
 BuildRequires : pkgconfig(libxml-2.0)
 BuildRequires : pkgconfig(uuid)
+BuildRequires : pypi(sphinx)
+BuildRequires : pypi-sphinx
 BuildRequires : valgrind
 
 %description
@@ -147,7 +148,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1631307387
+export SOURCE_DATE_EPOCH=1641853677
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -167,7 +168,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1631307387
+export SOURCE_DATE_EPOCH=1641853677
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/Pacemaker
 cp %{_builddir}/pacemaker-Pacemaker-2.1.1/COPYING %{buildroot}/usr/share/package-licenses/Pacemaker/bcf1446d76d42d5f2409dec0b232061e804d091d
