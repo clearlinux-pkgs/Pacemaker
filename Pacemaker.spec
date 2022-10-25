@@ -4,7 +4,7 @@
 #
 Name     : Pacemaker
 Version  : 2.1.1
-Release  : 24
+Release  : 25
 URL      : https://github.com/ClusterLabs/pacemaker/archive/Pacemaker-2.1.1/pacemaker-2.1.1.tar.gz
 Source0  : https://github.com/ClusterLabs/pacemaker/archive/Pacemaker-2.1.1/pacemaker-2.1.1.tar.gz
 Summary  : XML validation & transformation variables per Pacemaker build
@@ -148,7 +148,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1641853677
+export SOURCE_DATE_EPOCH=1666714626
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -168,10 +168,10 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1641853677
+export SOURCE_DATE_EPOCH=1666714626
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/Pacemaker
-cp %{_builddir}/pacemaker-Pacemaker-2.1.1/COPYING %{buildroot}/usr/share/package-licenses/Pacemaker/bcf1446d76d42d5f2409dec0b232061e804d091d
+cp %{_builddir}/pacemaker-Pacemaker-%{version}/COPYING %{buildroot}/usr/share/package-licenses/Pacemaker/bcf1446d76d42d5f2409dec0b232061e804d091d || :
 %make_install
 
 %files
@@ -4447,6 +4447,7 @@ cp %{_builddir}/pacemaker-Pacemaker-2.1.1/COPYING %{buildroot}/usr/share/package
 /usr/share/doc/pacemaker/Clusters_from_Scratch/singlehtml/_images/pcmk-internals.png
 /usr/share/doc/pacemaker/Clusters_from_Scratch/singlehtml/_images/pcmk-shared-failover.png
 /usr/share/doc/pacemaker/Clusters_from_Scratch/singlehtml/_images/pcmk-stack.png
+/usr/share/doc/pacemaker/Clusters_from_Scratch/singlehtml/_static/_sphinx_javascript_frameworks_compat.js
 /usr/share/doc/pacemaker/Clusters_from_Scratch/singlehtml/_static/basic.css
 /usr/share/doc/pacemaker/Clusters_from_Scratch/singlehtml/_static/dialog-note.png
 /usr/share/doc/pacemaker/Clusters_from_Scratch/singlehtml/_static/dialog-seealso.png
@@ -4460,7 +4461,7 @@ cp %{_builddir}/pacemaker-Pacemaker-2.1.1/COPYING %{buildroot}/usr/share/package
 /usr/share/doc/pacemaker/Clusters_from_Scratch/singlehtml/_static/footerbg.png
 /usr/share/doc/pacemaker/Clusters_from_Scratch/singlehtml/_static/headerbg.png
 /usr/share/doc/pacemaker/Clusters_from_Scratch/singlehtml/_static/ie6.css
-/usr/share/doc/pacemaker/Clusters_from_Scratch/singlehtml/_static/jquery-3.5.1.js
+/usr/share/doc/pacemaker/Clusters_from_Scratch/singlehtml/_static/jquery-3.6.0.js
 /usr/share/doc/pacemaker/Clusters_from_Scratch/singlehtml/_static/jquery.js
 /usr/share/doc/pacemaker/Clusters_from_Scratch/singlehtml/_static/language_data.js
 /usr/share/doc/pacemaker/Clusters_from_Scratch/singlehtml/_static/middlebg.png
@@ -4483,6 +4484,7 @@ cp %{_builddir}/pacemaker-Pacemaker-2.1.1/COPYING %{buildroot}/usr/share/package
 /usr/share/doc/pacemaker/Pacemaker_Administration/singlehtml/_images/pcmk-internals.png
 /usr/share/doc/pacemaker/Pacemaker_Administration/singlehtml/_images/pcmk-shared-failover.png
 /usr/share/doc/pacemaker/Pacemaker_Administration/singlehtml/_images/pcmk-stack.png
+/usr/share/doc/pacemaker/Pacemaker_Administration/singlehtml/_static/_sphinx_javascript_frameworks_compat.js
 /usr/share/doc/pacemaker/Pacemaker_Administration/singlehtml/_static/basic.css
 /usr/share/doc/pacemaker/Pacemaker_Administration/singlehtml/_static/dialog-note.png
 /usr/share/doc/pacemaker/Pacemaker_Administration/singlehtml/_static/dialog-seealso.png
@@ -4496,7 +4498,7 @@ cp %{_builddir}/pacemaker-Pacemaker-2.1.1/COPYING %{buildroot}/usr/share/package
 /usr/share/doc/pacemaker/Pacemaker_Administration/singlehtml/_static/footerbg.png
 /usr/share/doc/pacemaker/Pacemaker_Administration/singlehtml/_static/headerbg.png
 /usr/share/doc/pacemaker/Pacemaker_Administration/singlehtml/_static/ie6.css
-/usr/share/doc/pacemaker/Pacemaker_Administration/singlehtml/_static/jquery-3.5.1.js
+/usr/share/doc/pacemaker/Pacemaker_Administration/singlehtml/_static/jquery-3.6.0.js
 /usr/share/doc/pacemaker/Pacemaker_Administration/singlehtml/_static/jquery.js
 /usr/share/doc/pacemaker/Pacemaker_Administration/singlehtml/_static/language_data.js
 /usr/share/doc/pacemaker/Pacemaker_Administration/singlehtml/_static/middlebg.png
@@ -4512,6 +4514,7 @@ cp %{_builddir}/pacemaker-Pacemaker-2.1.1/COPYING %{buildroot}/usr/share/package
 /usr/share/doc/pacemaker/Pacemaker_Administration/singlehtml/index.html
 /usr/share/doc/pacemaker/Pacemaker_Administration/singlehtml/objects.inv
 /usr/share/doc/pacemaker/Pacemaker_Development/singlehtml/.buildinfo
+/usr/share/doc/pacemaker/Pacemaker_Development/singlehtml/_static/_sphinx_javascript_frameworks_compat.js
 /usr/share/doc/pacemaker/Pacemaker_Development/singlehtml/_static/basic.css
 /usr/share/doc/pacemaker/Pacemaker_Development/singlehtml/_static/dialog-note.png
 /usr/share/doc/pacemaker/Pacemaker_Development/singlehtml/_static/dialog-seealso.png
@@ -4525,7 +4528,7 @@ cp %{_builddir}/pacemaker-Pacemaker-2.1.1/COPYING %{buildroot}/usr/share/package
 /usr/share/doc/pacemaker/Pacemaker_Development/singlehtml/_static/footerbg.png
 /usr/share/doc/pacemaker/Pacemaker_Development/singlehtml/_static/headerbg.png
 /usr/share/doc/pacemaker/Pacemaker_Development/singlehtml/_static/ie6.css
-/usr/share/doc/pacemaker/Pacemaker_Development/singlehtml/_static/jquery-3.5.1.js
+/usr/share/doc/pacemaker/Pacemaker_Development/singlehtml/_static/jquery-3.6.0.js
 /usr/share/doc/pacemaker/Pacemaker_Development/singlehtml/_static/jquery.js
 /usr/share/doc/pacemaker/Pacemaker_Development/singlehtml/_static/language_data.js
 /usr/share/doc/pacemaker/Pacemaker_Development/singlehtml/_static/middlebg.png
@@ -4550,6 +4553,7 @@ cp %{_builddir}/pacemaker-Pacemaker-2.1.1/COPYING %{buildroot}/usr/share/package
 /usr/share/doc/pacemaker/Pacemaker_Explained/singlehtml/_images/resource-set.png
 /usr/share/doc/pacemaker/Pacemaker_Explained/singlehtml/_images/three-sets.png
 /usr/share/doc/pacemaker/Pacemaker_Explained/singlehtml/_images/two-sets.png
+/usr/share/doc/pacemaker/Pacemaker_Explained/singlehtml/_static/_sphinx_javascript_frameworks_compat.js
 /usr/share/doc/pacemaker/Pacemaker_Explained/singlehtml/_static/basic.css
 /usr/share/doc/pacemaker/Pacemaker_Explained/singlehtml/_static/dialog-note.png
 /usr/share/doc/pacemaker/Pacemaker_Explained/singlehtml/_static/dialog-seealso.png
@@ -4563,7 +4567,7 @@ cp %{_builddir}/pacemaker-Pacemaker-2.1.1/COPYING %{buildroot}/usr/share/package
 /usr/share/doc/pacemaker/Pacemaker_Explained/singlehtml/_static/footerbg.png
 /usr/share/doc/pacemaker/Pacemaker_Explained/singlehtml/_static/headerbg.png
 /usr/share/doc/pacemaker/Pacemaker_Explained/singlehtml/_static/ie6.css
-/usr/share/doc/pacemaker/Pacemaker_Explained/singlehtml/_static/jquery-3.5.1.js
+/usr/share/doc/pacemaker/Pacemaker_Explained/singlehtml/_static/jquery-3.6.0.js
 /usr/share/doc/pacemaker/Pacemaker_Explained/singlehtml/_static/jquery.js
 /usr/share/doc/pacemaker/Pacemaker_Explained/singlehtml/_static/language_data.js
 /usr/share/doc/pacemaker/Pacemaker_Explained/singlehtml/_static/middlebg.png
@@ -4581,6 +4585,7 @@ cp %{_builddir}/pacemaker-Pacemaker-2.1.1/COPYING %{buildroot}/usr/share/package
 /usr/share/doc/pacemaker/Pacemaker_Remote/singlehtml/.buildinfo
 /usr/share/doc/pacemaker/Pacemaker_Remote/singlehtml/_images/pcmk-ha-cluster-stack.png
 /usr/share/doc/pacemaker/Pacemaker_Remote/singlehtml/_images/pcmk-ha-remote-stack.png
+/usr/share/doc/pacemaker/Pacemaker_Remote/singlehtml/_static/_sphinx_javascript_frameworks_compat.js
 /usr/share/doc/pacemaker/Pacemaker_Remote/singlehtml/_static/basic.css
 /usr/share/doc/pacemaker/Pacemaker_Remote/singlehtml/_static/dialog-note.png
 /usr/share/doc/pacemaker/Pacemaker_Remote/singlehtml/_static/dialog-seealso.png
@@ -4594,7 +4599,7 @@ cp %{_builddir}/pacemaker-Pacemaker-2.1.1/COPYING %{buildroot}/usr/share/package
 /usr/share/doc/pacemaker/Pacemaker_Remote/singlehtml/_static/footerbg.png
 /usr/share/doc/pacemaker/Pacemaker_Remote/singlehtml/_static/headerbg.png
 /usr/share/doc/pacemaker/Pacemaker_Remote/singlehtml/_static/ie6.css
-/usr/share/doc/pacemaker/Pacemaker_Remote/singlehtml/_static/jquery-3.5.1.js
+/usr/share/doc/pacemaker/Pacemaker_Remote/singlehtml/_static/jquery-3.6.0.js
 /usr/share/doc/pacemaker/Pacemaker_Remote/singlehtml/_static/jquery.js
 /usr/share/doc/pacemaker/Pacemaker_Remote/singlehtml/_static/language_data.js
 /usr/share/doc/pacemaker/Pacemaker_Remote/singlehtml/_static/middlebg.png
